@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+                  <robot name="disc">
+                      <material name="light_blue">
+                          <color rgba="0.5 0.5 1 1"/>
+                      </material>
+                      <material name="dark_blue">
+                          <color rgba="0.1 0.1 1 1"/>
+                      </material>
+                      <material name="dark_red">
+                          <color rgba="1 0.1 0.1 1"/>
+                      </material>
+                      <link name="base_link">
+                          <visual>
+                              <geometry>
+                                  <cylinder length="0.06" radius="0.2"/>
+                              </geometry>
+                              <material name="light_blue"/>
+                          </visual>
+                      </link>
+                      <link name="heading_box">
+                          <visual>
+                              <geometry>
+                                  <box size="0.18000000000000002 0.04000000000000001 0.072"/>
+                              </geometry>
+                              <material name="dark_blue"/>
+                          </visual>
+                      </link>
+                      <link name="laser" />
+                      <joint name="base_to_heading_box" type="fixed">
+                          <parent link="base_link"/>
+                          <child link="heading_box"/>
+                          <origin xyz='0.09000000000000001 0.0 0.0'/>
+                      </joint>
+                      <joint name="base_to_laser" type="fixed">
+                          <parent link="base_link"/>
+                          <child link="laser"/>
+                          <origin xyz="0.1 0.0 0.0"/>
+                      </joint>
+                  </robot>
+                  

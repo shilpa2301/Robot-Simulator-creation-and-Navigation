@@ -1,0 +1,32 @@
+# Each cell is a square with this side length,
+# measured in meters.
+resolution: 0.30
+
+# The robot starts here, given as [x, y, theta], with
+# x and y in meters and theta in radians.
+# Coordinates are expressed in the 'world' frame.
+initial_pose: [1.0, 2.2, 1.45]
+
+# Where are the obstacles?
+#   # = obstacle
+#   . = free space
+#   Each non-empty line represents one row.
+#   Spaces and empty lines should be ignored.
+#
+# The 'world' frame origin is at the bottom left of
+# this map, with its positive x-axis going to the
+# right and its positive y-axis going up from there.
+map: |
+    ##################
+    #................#
+    #................#
+    #................#
+    #....###...###...#
+    #....###...###...#
+    #....###...###...#
+    #....###...###...#
+    #................#
+    #................#
+    #................#
+    ##################
+
